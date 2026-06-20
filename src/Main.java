@@ -49,13 +49,32 @@ class PartTimeEmployee extends employee{
 
 }
 class PayrollSystem{
-    private ArrayList<Employee> employeeList;
+    private ArrayList<employee> employeeList;
     public PayrollSystem(){
         employeeList=new ArrayList<>();
     }
 
-    public void addEmployee(Employee employee){
-        employeeList.add(employee);
+    public void addEmployee(employee employees){
+        employeeList.add(employees);
+    }
+
+    public void removeEmployee(int id){
+        employee employeeToRemove=null;
+        for(employee employees: employeeList){
+            if(employees.getId()==id){
+                employeeToRemove=employees;
+                break;
+            }
+        }
+        if(employeeToRemove!=null){
+            employeeList.remove(employeeToRemove);
+        }
+
+    }
+    public void displayEmployees(){
+        for(employee employees:employeeList){
+            System.out.println(employees);
+        }
     }
 }
 
@@ -64,6 +83,18 @@ class PayrollSystem{
 
 public class Main{
     public static void main(String[] args){
-        System.out.println("Hello World!");
+        PayrollSystem payrollSystem=new PayrollSystem();
+        FulltimeEmployee emp1= new FulltimeEmployee("Akshat",1,80000);
+        PartTimeEmployee emp2=new PartTimeEmployee("Alex",2,40,1000);
+
+        payrollSystem.addEmployee(emp1);
+        payrollSystem.addEmployee(emp2);
+        System.out.println("Initial Employee Data:");
+        payrollSystem.displayEmployees();
+        System.out.println("Remove employee:");
+        payrollSystem.removeEmployee(2);
+        System.out.println("Remaining Employees");
+        payrollSystem.displayEmployees();
+
     }
 }
