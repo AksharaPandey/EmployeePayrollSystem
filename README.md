@@ -3,7 +3,7 @@
 
 A lightweight, console-based Employee Payroll System built in Java using core Object-Oriented Programming (OOP) principles. This project demonstrates clean architecture, abstraction, polymorphism, and comprehensive unit testing using JUnit 5.
 
-## 🚀 Features
+##  Features
 
 - **Polymorphic Salary Calculation:** Handles different salary computation models for Full-Time (Fixed Monthly) and Part-Time (Hourly Rate × Hours Worked) employees seamlessly under a unified `employee` interface.
 - **Dynamic Payroll Management:** Ability to dynamically add and remove employees by unique IDs using Java `ArrayList`.
@@ -11,7 +11,7 @@ A lightweight, console-based Employee Payroll System built in Java using core Ob
 
 ---
 
-## 🏗️ Core OOP Concepts Demonstrated
+##  Core OOP Concepts Demonstrated
 
 * **Abstraction:** The core `employee` class is marked as `abstract`, ensuring it cannot be instantiated directly and forces subclasses to implement their specific `calculateSalary()` logic.
 * **Inheritance:** `FulltimeEmployee` and `PartTimeEmployee` extend the base `employee` class, reusing common attributes like `name` and `id`.
@@ -20,7 +20,7 @@ A lightweight, console-based Employee Payroll System built in Java using core Ob
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 src/
@@ -35,7 +35,7 @@ src/
 
 ---
 
-## 💻 Code Architecture Overview
+##  Code Architecture Overview
 
 ### Class Overview
 
@@ -46,7 +46,7 @@ src/
 
 ---
 
-## ⚙️ Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -61,7 +61,7 @@ src/
 
 ---
 
-## 🧪 Testing with JUnit 5
+##  Testing with JUnit 5
 
 The project includes an automated suite in `EmployeeTest.java` verifying the core operational math of the system.
 
